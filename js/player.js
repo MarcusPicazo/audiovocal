@@ -14,11 +14,25 @@
  */
 const TRACKS = [
   {
-    file: "assets/audio/demo-01.mp3",
-    titleEs: "Reel de locución y doblaje",
-    titleEn: "Voice over & dubbing reel",
-    tagEs: "Locución / Doblaje",
-    tagEn: "Voice Over / Dubbing"
+    file: "assets/audio/demo-01-cuento1.wav",
+    titleEs: "Narración — Cuento 1",
+    titleEn: "Storytelling — Story 1",
+    tagEs: "Narración / Storytelling",
+    tagEn: "Storytelling / Narration"
+  },
+  {
+    file: "assets/audio/demo-02-cuento2.wav",
+    titleEs: "Narración — Cuento 2",
+    titleEn: "Storytelling — Story 2",
+    tagEs: "Narración / Storytelling",
+    tagEn: "Storytelling / Narration"
+  },
+  {
+    file: "assets/audio/demo-03-comercial.wav",
+    titleEs: "Comercial",
+    titleEn: "Commercial",
+    tagEs: "Locución comercial",
+    tagEn: "Commercial Voice Over"
   }
 ];
 

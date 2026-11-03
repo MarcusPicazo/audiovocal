@@ -30,7 +30,7 @@ El reproductor soporta cualquier cantidad de pistas. Para agregar una nueva:
 }
 ```
 
-Actualmente el sitio incluye **1 muestra real** (`demo-01.mp3`). Se recomienda agregar 2 muestras adicionales antes de publicar en Netlify, tal como se planeó originalmente (3 audios de ejemplo).
+Actualmente el sitio incluye **3 muestras reales** (narración/storytelling x2 y un comercial), en formato WAV.
 
 ## Despliegue en Netlify
 

@@ -55,6 +55,7 @@ const I18N = {
     "contact.tag": "Trabajemos juntos",
     "contact.title": "¿Tienes un proyecto en mente?",
     "contact.sub": "Disponible para proyectos de mezcla, masterización, doblaje, locución bilingüe y producción de podcasts, de forma remota o presencial.",
+    "contact.cv": "Descargar CV",
     "contact.badge1": "🇲🇽 Español nativo — acento neutro mexicano",
     "contact.badge2": "🇬🇧 English native — UK accent",
     "contact.badge3": "🎧 Remoto / Presencial (CDMX & LA)",
@@ -120,6 +121,7 @@ const I18N = {
     "contact.tag": "Let's work together",
     "contact.title": "Have a project in mind?",
     "contact.sub": "Available for mixing, mastering, dubbing, bilingual voice over and podcast production projects, remote or on-site.",
+    "contact.cv": "Download CV",
     "contact.badge1": "🇲🇽 Native Spanish — neutral Mexican accent",
     "contact.badge2": "🇬🇧 Native English — UK accent",
     "contact.badge3": "🎧 Remote / On-site (Mexico City & LA)",
@@ -147,8 +149,7 @@ function applyLanguage(lang) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("marcus-portfolio-lang");
-  const browserLang = (navigator.language || "es").toLowerCase().startsWith("en") ? "en" : "es";
-  const initialLang = saved || browserLang;
+  const initialLang = saved === "es" || saved === "en" ? saved : "en";
   applyLanguage(initialLang);
 
   const langBtn = document.getElementById("lang-toggle");
