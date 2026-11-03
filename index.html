@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcus Escalona — Audio Engineer | Ingeniero de Audio</title>
+<meta name="description" content="Marcus Escalona — Audio Engineer & Mixing/Mastering Specialist. Bilingual (EN/ES) professional audio engineer with experience in dubbing, music and podcast production.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="noise-overlay"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="logo">MARCUS<span>.</span>ESCALONA</a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+      <a href="#work" data-i18n="nav.work">Colaboraciones</a>
+      <a href="#studio" data-i18n="nav.studio">Estudio</a>
+      <a href="#demos" data-i18n="nav.demos">Demos</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="lang-toggle" class="lang-btn" aria-label="Switch language">
+        <span class="lang-opt" data-lang="es">ES</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Ingeniero de Audio · Mezcla &amp; Masterización</p>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Dando forma</span><br>
+          <span class="accent" data-i18n="hero.title2">al sonido perfecto</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">Ingeniero de audio bilingüe (inglés/español nativo) con más de 7 años de experiencia en doblaje, música y producción de podcasts, trabajando con algunos de los actores de voz más reconocidos de México y Latinoamérica.</p>
+        <div class="hero-cta">
+          <a href="#demos" class="btn btn-primary" data-i18n="hero.ctaDemos">Escuchar demos</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.ctaContact">Contactar</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <div class="portrait-frame">
+          <img src="assets/img/marcus-portrait.webp" alt="Marcus Escalona, Audio Engineer" loading="eager">
+        </div>
+        <div class="portrait-glow"></div>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <span data-i18n="hero.scroll">Desplázate</span>
+      <div class="scroll-line"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <p class="section-tag" data-i18n="about.tag">Sobre mí</p>
+      <h2 class="section-title" data-i18n="about.title">Formación musical, oído técnico</h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p data-i18n="about.p1">Soy Marcus Escalona, ingeniero de audio mexicano-británico, nativo en inglés y español. Mi carrera comenzó con estudios formales en música e ingeniería en audio, lo que me dio tanto la sensibilidad artística como el dominio técnico necesario para trabajar en grabación, mezcla, masterización y postproducción de sonido.</p>
+          <p data-i18n="about.p2">A lo largo de mi carrera he trabajado como asistente de producción, camarógrafo, ingeniero de iluminación e ingeniero de audio, colaborando con las cadenas de cine más grandes y con artistas de doblaje reconocidos en México y América Latina. Hoy trabajo de forma remota para estudios en Estados Unidos, mezclando y masterizando proyectos musicales y podcasts de deporte, cine y comedia.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">7+</span>
+              <span class="stat-label" data-i18n="about.stat1">Años de experiencia</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label" data-i18n="about.stat2">Idiomas nativos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">100+</span>
+              <span class="stat-label" data-i18n="about.stat3">Proyectos de audio</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills">
+          <h3 data-i18n="about.skillsTitle">Especialidades</h3>
+          <ul class="skills-list">
+            <li data-i18n="about.skill1">Mezcla &amp; masterización</li>
+            <li data-i18n="about.skill2">Ingeniería de doblaje</li>
+            <li data-i18n="about.skill3">Producción de podcasts</li>
+            <li data-i18n="about.skill4">Grabación en estudio</li>
+            <li data-i18n="about.skill5">Postproducción de audio para video</li>
+            <li data-i18n="about.skill6">Traducción / locución bilingüe EN-ES</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <p class="section-tag" data-i18n="exp.tag">Trayectoria</p>
+      <h2 class="section-title" data-i18n="exp.title">Experiencia profesional</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Black Fox Productions</h3>
+              <span class="timeline-date" data-i18n="exp.job1.date">2020 — Presente</span>
+            </div>
+            <p class="timeline-role" data-i18n="exp.job1.role">Audio Engineer</p>
+            <p class="timeline-loc">📍 Los Angeles, CA</p>
+            <p class="timeline-desc" data-i18n="exp.job1.desc">Estudio de audio digital que apoya a artistas de todo el mundo. Contratado en 2020 a raíz de la pandemia, trabajo de forma remota desde entonces. Responsable de la mezcla y masterización de proyectos musicales y de múltiples podcasts sobre deportes, cine y comedia.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Black Media Productions</h3>
+              <span class="timeline-date" data-i18n="exp.job2.date">Ago 2017 — Mar 2019</span>
+            </div>
+            <p class="timeline-role" data-i18n="exp.job2.role">Audio Engineer and Assistant</p>
+            <p class="timeline-loc">📍 Ciudad de México</p>
+            <p class="timeline-desc" data-i18n="exp.job2.desc">Trabajo enfocado principalmente en producción como asistente, maximizando mi conocimiento y potencial en el campo. En múltiples ocasiones también trabajé como camarógrafo e ingeniero de iluminación por mi cercanía al área. Aquí tuve la oportunidad de colaborar con las cadenas de cine más grandes y con artistas de doblaje de México y Latinoamérica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATIONS -->
+  <section id="work" class="section work">
+    <div class="container">
+      <p class="section-tag" data-i18n="work.tag">Colaboraciones</p>
+      <h2 class="section-title" data-i18n="work.title">He trabajado con voces que reconoces</h2>
+      <p class="work-sub" data-i18n="work.sub">A lo largo de mi carrera en doblaje he tenido el privilegio de colaborar en proyectos junto a algunos de los actores de voz más reconocidos de México y Latinoamérica, entre ellos:</p>
+
+      <div class="actors-grid">
+        <div class="actor-card"><span>Mario Castañeda</span></div>
+        <div class="actor-card"><span>Beto Castillo</span></div>
+        <div class="actor-card"><span>Alex Orozco</span></div>
+        <div class="actor-card"><span>José Luis Orozco</span></div>
+        <div class="actor-card"><span>Carlos Segundo</span></div>
+        <div class="actor-card actor-more" data-i18n="work.andMore">Y muchos más</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO -->
+  <section id="studio" class="section studio">
+    <div class="container">
+      <p class="section-tag" data-i18n="studio.tag">Mi espacio de trabajo</p>
+      <h2 class="section-title" data-i18n="studio.title">Estudios profesionales propios</h2>
+      <p class="work-sub" data-i18n="studio.sub">Grabación, mezcla y masterización realizadas en salas tratadas acústicamente, con monitoreo profesional y equipo de nivel broadcast.</p>
+
+      <div class="studio-gallery">
+        <div class="studio-item studio-wide">
+          <img src="assets/img/studio-1.jpg" alt="Studio session, recording guitar" loading="lazy">
+        </div>
+        <div class="studio-item">
+          <img src="assets/img/studio-2.jpg" alt="Mixing desk with monitor speakers" loading="lazy">
+        </div>
+        <div class="studio-item">
+          <img src="assets/img/studio-3.jpg" alt="Top down view of mixing console" loading="lazy">
+        </div>
+        <div class="studio-item studio-wide">
+          <img src="assets/img/studio-4.jpg" alt="Recording session with electric guitar" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section id="demos" class="section demos">
+    <div class="container">
+      <p class="section-tag" data-i18n="demos.tag">Muestras</p>
+      <h2 class="section-title" data-i18n="demos.title">Escucha mi trabajo</h2>
+      <p class="work-sub" data-i18n="demos.sub">Algunas muestras de audio de proyectos de mezcla, masterización y locución. Reproduce en línea o descarga los archivos.</p>
+
+      <div class="player-list" id="player-list">
+        <!-- populated by js/player.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container contact-inner">
+      <div>
+        <p class="section-tag" data-i18n="contact.tag">Trabajemos juntos</p>
+        <h2 class="section-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
+        <p class="work-sub" data-i18n="contact.sub">Disponible para proyectos de mezcla, masterización, doblaje, locución bilingüe y producción de podcasts, de forma remota o presencial.</p>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:imarcuseg@gmail.com" class="btn btn-primary contact-email">imarcuseg@gmail.com</a>
+        <div class="contact-badges">
+          <span data-i18n="contact.badge1">🇲🇽 Nativo en español</span>
+          <span data-i18n="contact.badge2">🇬🇧 Nativo en inglés</span>
+          <span data-i18n="contact.badge3">🎧 Remoto / Presencial (CDMX &amp; LA)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Marcus Escalona. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
+    <a href="mailto:imarcuseg@gmail.com">imarcuseg@gmail.com</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/webgl-bg.js"></script>
+<script src="js/player.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
