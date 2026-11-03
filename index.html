@@ -15,18 +15,16 @@
 
 <canvas id="bg-canvas"></canvas>
 
-<div class="noise-overlay"></div>
-
 <header class="site-header">
   <div class="container header-inner">
     <a href="#home" class="logo">MARCUS<span>.</span>ESCALONA</a>
 
     <nav class="main-nav" id="main-nav">
+      <a href="#demos" data-i18n="nav.demos">Demos</a>
       <a href="#about" data-i18n="nav.about">Sobre mí</a>
       <a href="#experience" data-i18n="nav.experience">Experiencia</a>
       <a href="#work" data-i18n="nav.work">Colaboraciones</a>
       <a href="#studio" data-i18n="nav.studio">Estudio</a>
-      <a href="#demos" data-i18n="nav.demos">Demos</a>
       <a href="#contact" data-i18n="nav.contact">Contacto</a>
     </nav>
 
@@ -49,18 +47,18 @@
   <section id="home" class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Ingeniero de Audio · Mezcla &amp; Masterización</p>
-        <h1 class="hero-title">
+        <p class="eyebrow reveal" data-i18n="hero.eyebrow">Ingeniero de Audio · Mezcla &amp; Masterización</p>
+        <h1 class="hero-title reveal" style="transition-delay:.08s">
           <span data-i18n="hero.title1">Dando forma</span><br>
           <span class="accent" data-i18n="hero.title2">al sonido perfecto</span>
         </h1>
-        <p class="hero-sub" data-i18n="hero.sub">Ingeniero de audio bilingüe (inglés/español nativo) con más de 7 años de experiencia en doblaje, música y producción de podcasts, trabajando con algunos de los actores de voz más reconocidos de México y Latinoamérica.</p>
-        <div class="hero-cta">
+        <p class="hero-sub reveal" style="transition-delay:.16s" data-i18n="hero.sub">Ingeniero de audio británico-mexicano, bilingüe nativo, con más de 7 años de experiencia en doblaje, música y producción de podcasts, trabajando con algunos de los actores de voz más reconocidos de México y Latinoamérica.</p>
+        <div class="hero-cta reveal" style="transition-delay:.24s">
           <a href="#demos" class="btn btn-primary" data-i18n="hero.ctaDemos">Escuchar demos</a>
           <a href="#contact" class="btn btn-ghost" data-i18n="hero.ctaContact">Contactar</a>
         </div>
       </div>
-      <div class="hero-portrait">
+      <div class="hero-portrait reveal reveal-scale" style="transition-delay:.1s">
         <div class="portrait-frame">
           <img src="assets/img/marcus-portrait.webp" alt="Marcus Escalona, Audio Engineer" loading="eager">
         </div>
@@ -73,31 +71,44 @@
     </div>
   </section>
 
+  <!-- DEMOS -->
+  <section id="demos" class="section demos">
+    <div class="container">
+      <p class="section-tag reveal" data-i18n="demos.tag">Muestras</p>
+      <h2 class="section-title reveal" data-i18n="demos.title">Escucha mi trabajo</h2>
+      <p class="work-sub reveal" data-i18n="demos.sub">Algunas muestras de audio de proyectos de mezcla, masterización y locución. Reproduce en línea o descarga los archivos.</p>
+
+      <div class="player-list stagger-group" id="player-list">
+        <!-- populated by js/player.js -->
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about" class="section about">
     <div class="container">
-      <p class="section-tag" data-i18n="about.tag">Sobre mí</p>
-      <h2 class="section-title" data-i18n="about.title">Formación musical, oído técnico</h2>
+      <p class="section-tag reveal" data-i18n="about.tag">Sobre mí</p>
+      <h2 class="section-title reveal" data-i18n="about.title">Formación musical, oído técnico</h2>
       <div class="about-grid">
         <div class="about-copy">
-          <p data-i18n="about.p1">Soy Marcus Escalona, ingeniero de audio mexicano-británico, nativo en inglés y español. Mi carrera comenzó con estudios formales en música e ingeniería en audio, lo que me dio tanto la sensibilidad artística como el dominio técnico necesario para trabajar en grabación, mezcla, masterización y postproducción de sonido.</p>
-          <p data-i18n="about.p2">A lo largo de mi carrera he trabajado como asistente de producción, camarógrafo, ingeniero de iluminación e ingeniero de audio, colaborando con las cadenas de cine más grandes y con artistas de doblaje reconocidos en México y América Latina. Hoy trabajo de forma remota para estudios en Estados Unidos, mezclando y masterizando proyectos musicales y podcasts de deporte, cine y comedia.</p>
-          <div class="about-stats">
-            <div class="stat">
+          <p class="reveal" data-i18n="about.p1">Soy Marcus Escalona, ingeniero de audio británico-mexicano, nativo en inglés y español. Hablo español con acento neutro mexicano e inglés con acento británico (UK). Mi carrera comenzó con estudios formales en música e ingeniería en audio, lo que me dio tanto la sensibilidad artística como el dominio técnico necesario para trabajar en grabación, mezcla, masterización y postproducción de sonido.</p>
+          <p class="reveal" style="transition-delay:.06s" data-i18n="about.p2">A lo largo de mi carrera he trabajado como asistente de producción, camarógrafo, ingeniero de iluminación e ingeniero de audio, colaborando con las cadenas de cine más grandes y con artistas de doblaje reconocidos en México y América Latina. Hoy trabajo de forma remota para estudios en Estados Unidos, mezclando y masterizando proyectos musicales y podcasts de deporte, cine y comedia.</p>
+          <div class="about-stats stagger-group">
+            <div class="stat reveal">
               <span class="stat-num">7+</span>
               <span class="stat-label" data-i18n="about.stat1">Años de experiencia</span>
             </div>
-            <div class="stat">
+            <div class="stat reveal">
               <span class="stat-num">2</span>
               <span class="stat-label" data-i18n="about.stat2">Idiomas nativos</span>
             </div>
-            <div class="stat">
+            <div class="stat reveal">
               <span class="stat-num">100+</span>
               <span class="stat-label" data-i18n="about.stat3">Proyectos de audio</span>
             </div>
           </div>
         </div>
-        <div class="about-skills">
+        <div class="about-skills reveal" style="transition-delay:.12s">
           <h3 data-i18n="about.skillsTitle">Especialidades</h3>
           <ul class="skills-list">
             <li data-i18n="about.skill1">Mezcla &amp; masterización</li>
@@ -115,11 +126,11 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="section experience">
     <div class="container">
-      <p class="section-tag" data-i18n="exp.tag">Trayectoria</p>
-      <h2 class="section-title" data-i18n="exp.title">Experiencia profesional</h2>
+      <p class="section-tag reveal" data-i18n="exp.tag">Trayectoria</p>
+      <h2 class="section-title reveal" data-i18n="exp.title">Experiencia profesional</h2>
 
-      <div class="timeline">
-        <div class="timeline-item">
+      <div class="timeline stagger-group">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-head">
@@ -132,7 +143,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-head">
@@ -151,17 +162,17 @@
   <!-- COLLABORATIONS -->
   <section id="work" class="section work">
     <div class="container">
-      <p class="section-tag" data-i18n="work.tag">Colaboraciones</p>
-      <h2 class="section-title" data-i18n="work.title">He trabajado con voces que reconoces</h2>
-      <p class="work-sub" data-i18n="work.sub">A lo largo de mi carrera en doblaje he tenido el privilegio de colaborar en proyectos junto a algunos de los actores de voz más reconocidos de México y Latinoamérica, entre ellos:</p>
+      <p class="section-tag reveal" data-i18n="work.tag">Colaboraciones</p>
+      <h2 class="section-title reveal" data-i18n="work.title">He trabajado con voces que reconoces</h2>
+      <p class="work-sub reveal" data-i18n="work.sub">A lo largo de mi carrera en doblaje he tenido el privilegio de colaborar en proyectos junto a algunos de los actores de voz más reconocidos de México y Latinoamérica, entre ellos:</p>
 
-      <div class="actors-grid">
-        <div class="actor-card"><span>Mario Castañeda</span></div>
-        <div class="actor-card"><span>Beto Castillo</span></div>
-        <div class="actor-card"><span>Alex Orozco</span></div>
-        <div class="actor-card"><span>José Luis Orozco</span></div>
-        <div class="actor-card"><span>Carlos Segundo</span></div>
-        <div class="actor-card actor-more" data-i18n="work.andMore">Y muchos más</div>
+      <div class="actors-grid stagger-group">
+        <div class="actor-card reveal"><span>Mario Castañeda</span></div>
+        <div class="actor-card reveal"><span>Beto Castillo</span></div>
+        <div class="actor-card reveal"><span>Alex Orozco</span></div>
+        <div class="actor-card reveal"><span>José Luis Orozco</span></div>
+        <div class="actor-card reveal"><span>Carlos Segundo</span></div>
+        <div class="actor-card actor-more reveal" data-i18n="work.andMore">Y muchos más</div>
       </div>
     </div>
   </section>
@@ -169,36 +180,23 @@
   <!-- STUDIO -->
   <section id="studio" class="section studio">
     <div class="container">
-      <p class="section-tag" data-i18n="studio.tag">Mi espacio de trabajo</p>
-      <h2 class="section-title" data-i18n="studio.title">Estudios profesionales propios</h2>
-      <p class="work-sub" data-i18n="studio.sub">Grabación, mezcla y masterización realizadas en salas tratadas acústicamente, con monitoreo profesional y equipo de nivel broadcast.</p>
+      <p class="section-tag reveal" data-i18n="studio.tag">Mi espacio de trabajo</p>
+      <h2 class="section-title reveal" data-i18n="studio.title">Estudios profesionales propios</h2>
+      <p class="work-sub reveal" data-i18n="studio.sub">Grabación, mezcla y masterización realizadas en salas tratadas acústicamente, con monitoreo profesional y equipo de nivel broadcast.</p>
 
-      <div class="studio-gallery">
-        <div class="studio-item studio-wide">
+      <div class="studio-gallery stagger-group">
+        <div class="studio-item reveal reveal-scale">
           <img src="assets/img/studio-1.jpg" alt="Studio session, recording guitar" loading="lazy">
         </div>
-        <div class="studio-item">
+        <div class="studio-item reveal reveal-scale">
           <img src="assets/img/studio-2.jpg" alt="Mixing desk with monitor speakers" loading="lazy">
         </div>
-        <div class="studio-item">
+        <div class="studio-item reveal reveal-scale">
           <img src="assets/img/studio-3.jpg" alt="Top down view of mixing console" loading="lazy">
         </div>
-        <div class="studio-item studio-wide">
+        <div class="studio-item reveal reveal-scale">
           <img src="assets/img/studio-4.jpg" alt="Recording session with electric guitar" loading="lazy">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEMOS -->
-  <section id="demos" class="section demos">
-    <div class="container">
-      <p class="section-tag" data-i18n="demos.tag">Muestras</p>
-      <h2 class="section-title" data-i18n="demos.title">Escucha mi trabajo</h2>
-      <p class="work-sub" data-i18n="demos.sub">Algunas muestras de audio de proyectos de mezcla, masterización y locución. Reproduce en línea o descarga los archivos.</p>
-
-      <div class="player-list" id="player-list">
-        <!-- populated by js/player.js -->
       </div>
     </div>
   </section>
@@ -206,16 +204,20 @@
   <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="container contact-inner">
-      <div>
+      <div class="reveal">
         <p class="section-tag" data-i18n="contact.tag">Trabajemos juntos</p>
         <h2 class="section-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
         <p class="work-sub" data-i18n="contact.sub">Disponible para proyectos de mezcla, masterización, doblaje, locución bilingüe y producción de podcasts, de forma remota o presencial.</p>
       </div>
-      <div class="contact-actions">
-        <a href="mailto:imarcuseg@gmail.com" class="btn btn-primary contact-email">imarcuseg@gmail.com</a>
+      <div class="contact-actions reveal" style="transition-delay:.1s">
+        <a href="mailto:marcuspicazo@outlook.com" class="btn btn-primary contact-email">marcuspicazo@outlook.com</a>
+        <a href="https://www.linkedin.com/in/marcus-escalona/" target="_blank" rel="noopener" class="btn btn-ghost contact-linkedin">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right:8px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          LinkedIn
+        </a>
         <div class="contact-badges">
-          <span data-i18n="contact.badge1">🇲🇽 Nativo en español</span>
-          <span data-i18n="contact.badge2">🇬🇧 Nativo en inglés</span>
+          <span data-i18n="contact.badge1">🇲🇽 Español nativo — acento neutro mexicano</span>
+          <span data-i18n="contact.badge2">🇬🇧 English native — UK accent</span>
           <span data-i18n="contact.badge3">🎧 Remoto / Presencial (CDMX &amp; LA)</span>
         </div>
       </div>
@@ -227,7 +229,10 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <span>© <span id="year"></span> Marcus Escalona. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
-    <a href="mailto:imarcuseg@gmail.com">imarcuseg@gmail.com</a>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/marcus-escalona/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:marcuspicazo@outlook.com">marcuspicazo@outlook.com</a>
+    </div>
   </div>
 </footer>
 

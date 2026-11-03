@@ -22,21 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const revealEls = document.querySelectorAll(".section");
+  // Stagger entrance animations: elements inside .stagger-group get an
+  // incremental transition-delay so children animate in sequence.
+  document.querySelectorAll(".stagger-group").forEach(group => {
+    const items = group.querySelectorAll(":scope > .reveal");
+    items.forEach((el, i) => {
+      if (!el.style.transitionDelay) {
+        el.style.transitionDelay = `${i * 0.08}s`;
+      }
+    });
+  });
+
+  const revealEls = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
+        entry.target.classList.add("is-visible");
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
 
-  revealEls.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(24px)";
-    el.style.transition = "opacity .7s ease, transform .7s ease";
-    io.observe(el);
-  });
+  revealEls.forEach(el => io.observe(el));
 });
