@@ -39,7 +39,7 @@ const ICONS = {
 
 function buildPlayerCard(track, lang) {
   const wrap = document.createElement("div");
-  wrap.className = "player-card";
+  wrap.className = "player-card reveal";
 
   const audio = document.createElement("audio");
   audio.src = track.file;
@@ -57,9 +57,13 @@ function buildPlayerCard(track, lang) {
   titleRow.className = "player-title-row";
   const title = document.createElement("span");
   title.className = "player-title";
+  title.dataset.es = track.titleEs;
+  title.dataset.en = track.titleEn;
   title.textContent = lang === "en" ? track.titleEn : track.titleEs;
   const tag = document.createElement("span");
   tag.className = "player-tag";
+  tag.dataset.es = track.tagEs;
+  tag.dataset.en = track.tagEn;
   tag.textContent = lang === "en" ? track.tagEn : track.tagEs;
   titleRow.appendChild(title);
   titleRow.appendChild(tag);
@@ -182,8 +186,19 @@ function buildPlayerCard(track, lang) {
 window.renderPlayers = function (lang) {
   const list = document.getElementById("player-list");
   if (!list) return;
+
+  if (list.dataset.built === "true") {
+    // Already built — just swap the language-dependent text, don't
+    // recreate the DOM (that would reset playback and the entrance animation).
+    list.querySelectorAll(".player-title, .player-tag").forEach(el => {
+      el.textContent = lang === "en" ? el.dataset.en : el.dataset.es;
+    });
+    return;
+  }
+
   list.innerHTML = "";
   TRACKS.forEach(track => {
     list.appendChild(buildPlayerCard(track, lang));
   });
+  list.dataset.built = "true";
 };
